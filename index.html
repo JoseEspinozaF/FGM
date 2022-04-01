@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/indexStyles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#formulario">Forms</a>
+            <a href="#graficos">Graphics</a>
+            <a href="#Sonido">Media</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="formulario" class="form-content">
+            <div class="formsDetails">
+                <div class="conten-presentation">
+                    <img src="img/Logo.png" alt="JEcorporation">
+                    <h1>Te damos la Bienvenida <span>| JE Corporation</span> </h1>
+                    <h2>Somos una empresa paraguaya enfocada al Desarollo de software y estamos reclutando
+                        desarrolladores y
+                        programadores sin importar los años de experiencia, dentro de la empresa te capacitamos con
+                        todas
+                        las tecnologias y
+                        herramientas emergentes </h2>
+                    <p>Inicia el proceso de admisión al Programa</p>
+                </div>
+                <form class="items-formulario">
+                    <div class="item-PersoalInformation">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Ingrese su Nombre completo"
+                            required>
+                        <label for="Apellidos">Apellidos:</label>
+                        <input type="text" id="Apellidos" name="Apellidos" placeholder="Ingrese su apellido completo"
+                            required>
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su numero de telefono"
+                            required>
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" min="18" max="70" placeholder="Ejemplo: 18">
+                        <label for="paises">De que pais eres:</label>
+                        <input list="country" name="paises" id="paises">
+                        <datalist id="country">
+                            <option value="Paraguay">
+                            <option value="España">
+                            <option value="Mexico">
+                            <option value="EEUU">
+                            <option value="Peru">
+                        </datalist>
+
+                        <label for="direccion">Muestranos tu Portafolio ¿cuál es tu URL de Github o LinkedIn?</label>
+                        <input type="url" name="direccion" id="direccion" placeholder="https://">
+                    </div>
+                    <div class="item-email">
+                        <label for="correo">¿Cuál es tu correo electrónico? </label>
+                        <input type="email" name="correp" id="correo" placeholder="Ingrese su correo electronico"
+                            required>
+                    </div>
+                    <div class="items-tecnolgies">
+                        <p>¿Qué descripción se ajusta mejor a tu perfil?</p>
+                        <input type="checkbox" id="frontEnd" name="frontEnd" value="FrontEndDeveloper">
+                        <label for="frontEnd">Front-End Developer</label>
+                        <input type="checkbox" id="backendDeveloper" name="backendDeveloper" value="Back-End Developer">
+                        <label for="backendDeveloper">Back-End Developer</label>
+                        <input type="checkbox" id="fullstackDeveloper" name="fullstackDeveloper"
+                            value="Full Stack Developer">
+                        <label for="fullstackDeveloper">Full Stack Developer</label>
+                        <input type="checkbox" id="Mobile" name="Mobile" value="MobileDeveloper">
+                        <label for="Mobile">Mobile Developer</label>
+                    </div>
+                    <div class="item-lenguageAndFrameworks">
+                        <p>Selecciona los lenguajes o frameworks en los que tienes mayor experiencia </p>
+                        <input type="checkbox" id="jsFront" name="jsFront" value="JavascriptFrontEnd">
+                        <label for="jsFront">Javascript Front-End</label><br>
+                        <input type="checkbox" id="backendDeveloper" name="backendDeveloper" value="Back-End Developer">
+                        <label for="jsBackend">Javascript Back-End</label><br>
+                        <input type="checkbox" id="python" name="python" value="Python">
+                        <label for="python">Python</label><br>
+                        <input type="checkbox" id="Swift" name="Swift" value="Swift">
+                        <label for="Swift">Swift</label><br>
+                        <input type="checkbox" id="vue" name="vue" value="Vue">
+                        <label for="vue">Vue Js</label><br>
+                    </div>
+                    <button id="send">Enviar</button>
+                </form>
+            </div>
+
+        </section>
+        <section id="graficos" class="graphics-content">
+            <h1>Welcome to Graphics</h1>
+            <canvas class="content-canvas">
+            </canvas>
+            <svg width="300" height="200">
+                <polygon points="100,10 40,198 190,78 10,78 160,198" />
+                <circle cx="100" cy="110" r="30" stroke="black" stroke-width="42" fill="white" />
+            </svg>
+        </section>
+        <section class="media-content">
+            <h1 id="Sonido">The Ice Age</h1>
+            <video id="vide" poster="img/post.jpg">
+                <source src="video/LAERADEHIELOLASAVENTURA.mp4" type="video/mp4">
+            </video>
+            <audio src="audio/DivinersSavannah.mp3"></audio>
+            <audio id="audio" controls>
+                <source src="audio/DivinersSavannah.mp3" type="audio/mp3">
+            </audio>
+            <div class="youutube">
+                <div class="yout" id="yt"></div>
+            </div>
+            <div class="item-button">
+                <button onclick="videoPlayPause()">Reproducir Video</button>
+                <button onclick="audioPlayPause()">Reproducir Audio</button>
+                <button onclick="generarVideo()">Generar Video YT</button>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/Media.js"></script>
+</body>
+
+</html>
