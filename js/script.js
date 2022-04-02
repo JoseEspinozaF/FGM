@@ -1,10 +1,10 @@
 let img, canvas, ctx, posX = 0,
     posy = 0
 window.onload = function () {
-    img = new Image();
-    img.src = '../img/post.jpg'
     canvas = document.querySelector(".content-canvas")
     ctx = canvas.getContext('2d')
+    img = new Image();
+    img.src = '../img/post.jpg'
     animar()
 
 
