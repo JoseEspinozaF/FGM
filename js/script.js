@@ -1,18 +1,9 @@
-window.onload = function () {
-    let img, canvas, ctx, posX = 0,
-        posy = 0
-    canvas = document.querySelector(".content-canvas")
-    ctx = canvas.getContext('2d')
-    img = new Image();
-    img.src = '../img/post.jpg'
-    ctx.drawImage(img, posX, posy, 40, 40);
-    ctx.clearRect(0, 0, 700, 800);
-    posX += 20
-    if (posX >= 400) {
-        posX = -50
-    }
-
-    setTimeout(animar, 100);
-
-
-}
+window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    context.font = "bold 30px Monospace";
+    context.textAlign = "center";
+    context.textBaseline = "middle";
+    context.strokeStyle = "black";
+    context.strokeText("This is Canvas", 150, 100);
+};
