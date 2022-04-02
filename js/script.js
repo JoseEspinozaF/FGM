@@ -11,8 +11,8 @@ window.onload = function () {
 }
 
 function animar() {
-    ctx.clearRect(0, 0, 700, 800);
     ctx.drawImage(img, posX, posy, 40, 40);
+    ctx.clearRect(0, 0, 700, 800);
     posX += 20
     if (posX >= 400) {
         posX = -50
